@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Pumpkin
+comment0.text=\r\n\ Testing\ to\ see\ how\ Java\ makes\ constructors\r\n\r\n\ @author\ (Peter\ Klopp)\r\n\ @version\ (1/8/2020)\r\n
+comment1.params=x\ y
+comment1.target=Pumpkin(int,\ double)
+comment2.params=
+comment2.target=void\ main()
+numComments=3
