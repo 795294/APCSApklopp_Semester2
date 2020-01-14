@@ -13,8 +13,15 @@ public class Word implements Comparable<Word>
   {
 
      //must add code to complete 
-
+     
+     Word object = (Word)other;
+     if(orig.length() < object.orig.length()){
+        return -1;
+     }else if(orig.length() == object.orig.length()){
+        return 0;
+     }
      return 1; 
+     
   }
 
   public String toString() { return orig; }
