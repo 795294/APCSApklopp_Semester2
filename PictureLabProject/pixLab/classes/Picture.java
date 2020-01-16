@@ -538,8 +538,8 @@ public class Picture extends SimplePicture
                     nextColor = nextPixel.getColor();
                     if (leftPixel.colorDistance(nextColor) > edgeDist) {
                         leftPixel.setRed(50);
-                        leftPixel.setGreen(110);
-                        leftPixel.setBlue(90);
+                        leftPixel.setGreen(168);
+                        leftPixel.setBlue(82);
                         continue;
                     }
                 }
@@ -547,13 +547,15 @@ public class Picture extends SimplePicture
                     nextPixel = pixels[row+1][col];
                     nextColor = nextPixel.getColor();
                     if (leftPixel.colorDistance(nextColor) > edgeDist) {
-                        leftPixel.setRed(20);
-                        leftPixel.setGreen(70);
-                        leftPixel.setBlue(50);
+                        leftPixel.setRed(50);
+                        leftPixel.setGreen(164);
+                        leftPixel.setBlue(168);
                         continue;
                     }
                 }
-                leftPixel.setColor(Color.BLACK);
+                leftPixel.setRed(84);
+                leftPixel.setGreen(37);
+                leftPixel.setBlue(89);
             }
         }
     }
