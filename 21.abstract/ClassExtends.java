@@ -29,7 +29,7 @@ class C
 class D extends A,B   //no can do
 {
 
-}
+}//java does not allow you to extend multiple classes,but multiple interfaces can be implemented in the same class
 
 public class ClassExtends
 {

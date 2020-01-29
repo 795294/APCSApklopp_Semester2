@@ -13,6 +13,8 @@ public class DynamicBinding
 	      sum += list.get(i);
 	   return sum / list.size();
 	}
+	
+	//Calls to processList() could be made with an ArrayList, LinkedList, Vector, or Stack as all four classes implement the List interface, sharing a common set of methods.
 
   public static void main ( String[] args )
   {
