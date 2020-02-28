@@ -13,7 +13,7 @@ public class SortTester
     public void loadNumbers(ArrayList<Integer> n, int x){
         for(int i = 0; i<x; i++){
 
-            int rand = (int)(Math.random()*100000);
+            int rand = (int)(Math.random()*1000);
 
             n.add(rand);
 
@@ -88,23 +88,44 @@ public class SortTester
             System.out.print(n.get(i) + ",");
         }
     }
-    
+
     public void mergeSort(ArrayList<Integer> n){
-        System.out.println("\nMerge Sorted list: ");
         if(n.size()<2){
             return;
         }
-        
+
         int mid = n.size()/2;
-        
-        int[] l = new int[mid];
-        int[] r = new int[n.size()-mid];
-        
-        
+
+        ArrayList<Integer> l = new ArrayList<Integer>(mid);
+        ArrayList<Integer> r = new ArrayList<Integer>(n.size()-mid);
+
+        for(int i = 0; i < mid; i++){
+            l.add(n.get(i));
+        }
+        for(int i = mid; i < n.size(); i++){
+            r.add(n.get(i));
+        }
+
+        mergeSort(l);
+        mergeSort(r);
+        merge(n, l, r, mid, n.size()- mid);
     }
-    
-    public void merge(){
-        
+
+    public void merge(ArrayList<Integer> n, ArrayList<Integer> l, ArrayList<Integer> r, int left, int right){
+        int i = 0, j = 0;
+        while(i < left && j < right){
+            if(l.get(i) <= r.get(j)){
+                n.add(l.get(i++));;
+            }else{
+                n.add(r.get(j++));
+            }
+        }
+        while(i < left){
+            n.add(l.get(i++));
+        }
+        while(j < right){
+            n.add(r.get(j++));
+        }
     }
 
     public static void main(){
@@ -112,13 +133,15 @@ public class SortTester
 
         SortTester sort = new SortTester();
 
-        sort.loadNumbers(numList, 100000);
+        sort.loadNumbers(numList, 1000);
 
         sort.bubbleSort(numList);
 
         sort.insertSort(numList);
 
         sort.selectSort(numList);
+        
+        sort.mergeSort(numList);
 
     }
 
