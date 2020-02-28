@@ -3,7 +3,7 @@
  * Sorts an ArrayList of numbers using different algorithms
  *
  * @author (Peter Klopp)
- * @version (Lab1024 - SortTester)
+ * @version (Lab226 - SortTester)
  */
 import java.util.*;
 
@@ -142,6 +142,10 @@ public class SortTester
         sort.selectSort(numList);
         
         sort.mergeSort(numList);
+        
+        System.out.println("\nMerge Sorted list: ");
+        
+        System.out.print(numList);
 
     }
 
