@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Final Webpage Project</title>
+        
+        <script src = "JSVector.js"></script>
+        <script src = "Particles.js"></script>
+        <script src = "ParticleSystems.js"></script>
+        <script src = "Planets.js"></script>
+        <script src = "sketch.js"></script>
+        <script src = "Sun.js"></script>
+        <script src = "Ships.js"></script>
+        <script src = "Snakes.js"></script>
+        <script src = "boids.js"></script>
+        <script src = "flock.js"></script>
+        <script src = "balls.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	
+	<body>
+		<div id="header">
+			<h1>Final Webpage Project</h1>
+			<p>by: <b>Peter Klopp</b></p>
+		</div>
+
+		<div class="main">
+		  <div class="sidebar">
+			  <h2>Photo of me</h2>
+			  <img src="IMG_5625.JPG" width="200" height="200">
+			  <p>This is me eating a lobster.</p>
+		  </div>
+		  <div class="ecosystem">
+              <h2>ECOSYSTEM PROJECT</h2>
+                <div class="slidercontainer">
+                    <h3>Use the sliders to adjust the behavior of the flocks</h3>
+                    Separation<br>
+                    <input type="range" min="1" max="100" value="50" class = "slider" id="sep">
+                    Alignment<br>
+                    <input type="range" min="1" max="100" value="50" class = "slider" id="align">
+                    Cohesion<br>
+                    <input type="range" min="1" max="100" value="50" class = "slider" id="coh">
+                    Wall Repulsion<br>
+                    <input type="range" min="1" max="100" value="50" class = "slider" id="rep">
+                </div>
+
+                <div class = "canvas-wrapper">
+                    <h3>Navigate the world with WASD. Use the minimap to see where you are.</h3>
+                    <canvas id = "cnv" class = "canvas-container"></canvas>
+                </div>
+                <div class = "minimap-wrapper">
+                    <canvas id = "minimap" class = "minimap-container"> </canvas>
+                </div>
+		  </div>
+        </div>
+						
+	</body>
+	
+</html>
